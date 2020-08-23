@@ -11,7 +11,6 @@ interface HeaderProps {
     title: string;
     icon: boolean;
     description?: string; 
-    goBackPage?:string
 }
 
 const Header: React.FC<HeaderProps> = ({ title, icon, description, children}) => {

@@ -14,93 +14,100 @@ import postIcon from '../assets/post-icon.png'
 import profileIcon from '../assets/profile-icon.png'
 import walletIcon from '../assets/wallet.png'
 import styles from '../pages/Home/styles';
+import { RectButton, BorderlessButton } from 'react-native-gesture-handler';
+import { useNavigation } from '@react-navigation/native';
 
 
 
 const Tab = createBottomTabNavigator();
 
 export default function App() {
-    return (      
-            <Tab.Navigator
-                tabBarOptions={{
-                    style: {
-                        elevation: 0,
-                        shadowOpacity: 0,
-                        height: 75,
-                    },
-                    tabStyle: {
-                        alignItems: 'center',
-                        justifyContent: 'center'
-                    },
-                    labelStyle: {
-                        fontFamily: 'Ubuntu_700Bold',
-                        fontSize: 11,
-                        marginBottom: 20
-                    },
-                    inactiveBackgroundColor: '#FAFAFC',
-                    activeBackgroundColor: '#FDFDFD',
-                    inactiveTintColor: '#C1BCCC',
-                    activeTintColor: '#959595'
-                }}>
-                <Tab.Screen
-                    name="Home"
-                    component={Home}
-                    options={{
-                        tabBarLabel: 'Meu Negócio',
-                        tabBarIcon: ({ color, size, focused }) => {
-                            return (
-                                <Image source={homeIcon}></Image>
-                            );
-                        }
-                    }} />
-                <Tab.Screen
-                    name="Messages"
-                    component={Messages}
-                    options={{
-                        tabBarLabel: 'Mensagens',
-                        tabBarIcon: () => {
-                            return (
-                                <Image source={messageIcon}></Image>
-                            );
-                        }
-                    }} />
-                <Tab.Screen
-                    name="Post"
-                    component={Post}
-                    options={{
-                        tabBarLabel: 'Postar',
-                        tabBarIcon: ({ color, size, focused }) => {
-                            return (
-                                <Image source={postIcon} style={{
-                                    position: "absolute",
-                                    top: -48,
-                                }}/>
-                            );
-                        }
-                    }} />
-                <Tab.Screen
-                    name="Wallet"
-                    component={Wallet}
-                    options={{
-                        tabBarLabel: 'Carteira',
-                        tabBarIcon: ({ color, size, focused }) => {
-                            return (
-                                <Image source={walletIcon}></Image>
-                            );
-                        }
-                    }} />
-                <Tab.Screen
-                    name="Profile"
-                    component={Profile}
-                    options={{
-                        tabBarLabel: 'Perfil',
-                        tabBarIcon: ({ color, size, focused }) => {
-                            return (
-                                <Image source={profileIcon}></Image>
-                            );
-                        }
-                    }} />
+    const { navigate } = useNavigation();
+    
+    function handleNavigateToPost(){
+        navigate('Post')
+    }
 
-            </Tab.Navigator>
+    return (
+        <Tab.Navigator
+            tabBarOptions={{
+                style: {
+                    elevation: 0,
+                    shadowOpacity: 0,
+                    height: 75,
+                },
+                tabStyle: {
+                    alignItems: 'center',
+                    justifyContent: 'center'
+                },
+                labelStyle: {
+                    fontFamily: 'Ubuntu_700Bold',
+                    fontSize: 11,
+                    marginBottom: 20
+                },
+                inactiveBackgroundColor: '#FAFAFC',
+                activeBackgroundColor: '#FDFDFD',
+                inactiveTintColor: '#C1BCCC',
+                activeTintColor: '#959595'
+            }}>
+            <Tab.Screen
+                name="Home"
+                component={Home}
+                options={{
+                    tabBarLabel: 'Meu Negócio',
+                    tabBarIcon: ({ color, size, focused }) => {
+                        return (
+                            <Image source={homeIcon}></Image>
+                        );
+                    }
+                }} />
+            <Tab.Screen
+                name="Messages"
+                component={Messages}
+                options={{
+                    tabBarLabel: 'Mensagens',
+                    tabBarIcon: () => {
+                        return (
+                            <Image source={messageIcon}></Image>
+                        );
+                    }
+                }} />
+            <Tab.Screen
+                name="Post"
+                component={Post}
+                options={{
+                    tabBarLabel: 'Postar',
+                    tabBarIcon: ({ color, size, focused }) => {
+                        return (
+                            <BorderlessButton style={{position: "absolute", top: -41}}>
+                                <Image source={postIcon}/>
+                            </BorderlessButton>
+                        );
+                    }
+                }} />
+            <Tab.Screen
+                name="Wallet"
+                component={Wallet}
+                options={{
+                    tabBarLabel: 'Carteira',
+                    tabBarIcon: ({ color, size, focused }) => {
+                        return (
+                            <Image source={walletIcon}></Image>
+                        );
+                    }
+                }} />
+            <Tab.Screen
+                name="Profile"
+                component={Profile}
+                options={{
+                    tabBarLabel: 'Perfil',
+                    tabBarIcon: ({ color, size, focused }) => {
+                        return (
+                            <Image source={profileIcon}></Image>
+                        );
+                    }
+                }} />
+
+        </Tab.Navigator>
     );
 }
