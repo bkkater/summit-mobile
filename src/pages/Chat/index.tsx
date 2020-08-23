@@ -1,11 +1,13 @@
 import React from 'react';
-import { View } from 'react-native';
+import { View, Text } from 'react-native';
 
 import style from './styles'
 
 function Chat(){
   return (
-      <View></View>
+      <View>
+        <Text>Aqui está o chat</Text>
+      </View>
   )
 }
 

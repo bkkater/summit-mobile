@@ -12,7 +12,6 @@ import manegeBusness from '../../assets/manage-busness.png';
 
 import Header from '../../components/Header'
 
-
 function Home() {
     return (
         <View>

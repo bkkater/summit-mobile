@@ -3,11 +3,10 @@ import { View, Text, ScrollView } from 'react-native';
 
 import style from './styles'
 import Header from '../../components/Header';
-
-import messageRoute from '../../assets/message-route.png'
 import Message from '../../components/Message';
 
 function Messages() {
+
   return (
     <View>
       <ScrollView>

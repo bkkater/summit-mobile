@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Image } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+
 import Home from '../pages/Home';
 import Messages from '../pages/Messages';
 import Post from '../pages/Post';
@@ -19,8 +19,7 @@ import walletIcon from '../assets/wallet.png'
 const Tab = createBottomTabNavigator();
 
 export default function App() {
-    return (
-        <NavigationContainer>
+    return (      
             <Tab.Navigator
                 tabBarOptions={{
                     style: {
@@ -99,6 +98,5 @@ export default function App() {
                     }} />
 
             </Tab.Navigator>
-        </NavigationContainer>
     );
 }
