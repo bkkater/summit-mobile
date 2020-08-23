@@ -16,6 +16,7 @@ simples e amigável.
 - React Native
 - Expo
 - Typescript
+- Django Rest
 
 ## 🎨 Layout
 - [Figma](https://www.figma.com/file/kxMeQl6AXbNQHNw55Oz1L1/Ame---pequenos-neg%C3%B3cios?node-id=0%3A1)
