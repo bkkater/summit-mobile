@@ -16,7 +16,7 @@ import paymentsIcon from '../../assets/payments.png'
 function Wallet() {
   return (
     <View>
-      <Header title='Carteira' />
+      <Header title='Carteira' icon={false}/>
 
       <View style={style.card}>
         <View style={style.cardHeader}>

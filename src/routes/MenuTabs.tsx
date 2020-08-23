@@ -13,6 +13,7 @@ import messageIcon from '../assets/message-icon.png'
 import postIcon from '../assets/post-icon.png'
 import profileIcon from '../assets/profile-icon.png'
 import walletIcon from '../assets/wallet.png'
+import styles from '../pages/Home/styles';
 
 
 
@@ -37,7 +38,7 @@ export default function App() {
                         marginBottom: 20
                     },
                     inactiveBackgroundColor: '#FAFAFC',
-                    activeBackgroundColor: '#e0dcdc',
+                    activeBackgroundColor: '#FDFDFD',
                     inactiveTintColor: '#C1BCCC',
                     activeTintColor: '#959595'
                 }}>
@@ -70,7 +71,10 @@ export default function App() {
                         tabBarLabel: 'Postar',
                         tabBarIcon: ({ color, size, focused }) => {
                             return (
-                                <Image source={postIcon}></Image>
+                                <Image source={postIcon} style={{
+                                    position: "absolute",
+                                    top: -48,
+                                }}/>
                             );
                         }
                     }} />

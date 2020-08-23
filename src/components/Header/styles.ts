@@ -3,7 +3,7 @@ import { StyleSheet } from 'react-native';
 const styles = StyleSheet.create({
     header: {
         position: "relative",
-        backgroundColor: '#05B88A',
+        backgroundColor: '#279FAE',
         height: 150
     },
     textHeader: {
@@ -15,6 +15,10 @@ const styles = StyleSheet.create({
         fontFamily: 'Ubuntu_700Bold',
         marginBottom: 10
     },
+    image: {
+        margin: 20,
+        marginTop: 40
+    }
 })
 
 export default styles;

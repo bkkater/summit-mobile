@@ -15,7 +15,7 @@ import Header from '../../components/Header'
 function Home() {
     return (
         <View>
-            <Header title="Meu Negócio"/>
+            <Header title="Meu Negócio" icon={false}/>
 
             <View style={styles.card}>
                 <Text style={styles.suggestionText}>O item Bolo de brigadeiro tem recebido muitas visitas, que tal investir no cashback desse produto?</Text>

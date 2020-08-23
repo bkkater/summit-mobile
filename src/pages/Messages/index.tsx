@@ -10,7 +10,7 @@ function Messages() {
   return (
     <View>
       <ScrollView>
-        <Header title="Mensagens" />
+        <Header title="Mensagens" icon={false}/>
         <View style={style.alert}>
           <Text style={style.alertText}>Você tem novas mensagens!</Text>
         </View>
