@@ -31,6 +31,20 @@ simples e amigável.
 - [Vinícius Gabeira](https://www.linkedin.com/in/viniciuscola/)
 - [Silas Moreira](https://www.linkedin.com/in/silasmoreira/)
 
+### 📱 Como Rodar o Projeto
+Para rodar o projeto mobile você precisa de um celular com o [expo](https://play.google.com/store/apps/details?id=host.exp.exponent) instlado ou um emulador android/ios.
+
+```bash
+# Vá para a pasta mobile
+$ cd summit-mobile
+
+# Instale as depedencias
+$ yarn install
+
+# Rode a aplicação
+$ yarn start
+```
+Depois leia o QRCode com o app do [expo](https://play.google.com/store/apps/details?id=host.exp.exponent) ou rode em um emulador.
 
 
 
