@@ -6,7 +6,7 @@
 
 ## 💻 Sobre o projeto
 
-> Pensando em resolver problema dentro do que foi requerido no desafio AME, desenvolvemos o AME – Pequenos
+Pensando em resolver problema dentro do que foi requerido no desafio AME, desenvolvemos o AME – Pequenos
 Negócios. Uma solução que procura ter a facilidade das postagens como em uma rede social associada à organização de
 um marketplace, livrando os MEIs de catálogos exaustivos. Prezando acessibilidade através de uma interface fluida,
 simples e amigável.
