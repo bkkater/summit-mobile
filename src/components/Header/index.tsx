@@ -10,13 +10,15 @@ import { useNavigation } from '@react-navigation/native';
 interface HeaderProps {
     title: string;
     icon: boolean;
+    description?: string; 
+    goBackPage?:string
 }
 
-const Header: React.FC<HeaderProps> = ({ title, icon}) => {
+const Header: React.FC<HeaderProps> = ({ title, icon, description, children}) => {
     const { navigate } = useNavigation();
 
     function handleNavigateToBack() {
-        navigate('Messages')
+        navigate('goBackPage')
     }
 
     if(icon) {
@@ -25,13 +27,17 @@ const Header: React.FC<HeaderProps> = ({ title, icon}) => {
                 <BorderlessButton onPress={handleNavigateToBack}>
                     <Image source={goBack} style={styles.image}></Image>
                 </BorderlessButton>
+                {children}
                 <Text style={styles.textHeader}>{title}</Text>
+                <Text style={styles.textDescription}>{description}</Text> 
             </View>
         )
     }
     return (
         <View style={styles.header}>
+            {children}
             <Text style={styles.textHeader}>{title}</Text>
+            <Text style={styles.textDescription}>{description}</Text>
         </View>
     )
 }

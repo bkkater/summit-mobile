@@ -13,11 +13,20 @@ const styles = StyleSheet.create({
         bottom: 10,
         left: 20,
         fontFamily: 'Ubuntu_700Bold',
-        marginBottom: 10
+        marginBottom: 30
     },
     image: {
         margin: 20,
         marginTop: 40
+    },
+    textDescription: {
+        fontSize: 18,
+        position: "absolute",
+        color: '#FFF',
+        bottom: -18,
+        left: 22,
+        fontFamily: 'Ubuntu_500Medium',
+        marginBottom: 30
     }
 })
 
