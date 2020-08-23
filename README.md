@@ -1,9 +1,7 @@
 <h1 align ="center">
-    <img src="" alt="Imagem do Site" title="#Ame - Pequenos Negócios"></img>
+    <img src="src/assets/app.png" alt="Imagem do Site" title="#Ame - Pequenos Negócios"></img>
 </h1>
 
-
- 
 ## Ame - Pequenos Negócios 🚀 em construção... 🚧
 
 ## 💻 Sobre o projeto
@@ -17,15 +15,9 @@
 
 ## 🛠 Tecnologias
 
-Front End
-
 - React Native
 - Expo
 - Typescript
-
-Back End
-
-- Texto...
 
 ## 💡 Curiosidades
 
