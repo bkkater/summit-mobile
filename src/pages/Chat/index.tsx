@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, Image, KeyboardAvoidingView } from 'react-native';
-import { ScrollView, TextInput } from 'react-native-gesture-handler';
+import { ScrollView, TextInput, BorderlessButton } from 'react-native-gesture-handler';
 
 import style from './styles'
 import Header from '../../components/Header';
@@ -8,12 +8,25 @@ import Header from '../../components/Header';
 import userChat from '../../assets/user-chat.png';
 import sendFile from '../../assets/file.png';
 import send from '../../assets/send.png';
+import goBack from '../../assets/goBack.png'
+import { useNavigation } from '@react-navigation/native';
 
 function Chat() {
+  const { navigate } = useNavigation();
+
+  function handleNavigateToBack() {
+    navigate('Messages')
+  }
   return (
     <View>
       <ScrollView>
-        <Header title='Maria Cecília' icon={true} />
+        <Header title='Maria Cecília' icon={false}>
+
+          <BorderlessButton onPress={handleNavigateToBack}>
+            <Image source={goBack} style={style.image}></Image>
+          </BorderlessButton>
+        </Header>
+
 
         <View style={style.content}>
 
@@ -69,7 +82,7 @@ function Chat() {
           <View style={style.field}></View>
         </View>
       </KeyboardAvoidingView>
-    </View>
+    </View >
   )
 }
 

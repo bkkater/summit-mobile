@@ -66,6 +66,10 @@ const styles = StyleSheet.create({
     },
     box: {
         marginBottom: -70,
+    },
+    image: {
+        margin: 20,
+        marginTop: 40
     }
 })
 
